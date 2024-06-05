@@ -18,6 +18,8 @@ public:
     enum class Mode { NONE, SIMPLE, BB };
 
     void RunImpl(Mode mode, bool need_to_measure);
+    int RunInstr();
+    const GPR_file &getGPRfile();
 
     Hart(mem::MMU *mmu, uintptr_t entry_point, bool is_cosim)
         : mmu_(mmu), fetch_(mmu), executor_(mmu_, entry_point, is_cosim), is_cosim_(is_cosim) {};

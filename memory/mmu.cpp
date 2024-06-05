@@ -280,7 +280,7 @@ void MMU::ValidateElfHeader(const GElf_Ehdr &ehdr) const
     checkHeaderField(e_ident[EI_MAG1], ELFMAG1);
     checkHeaderField(e_ident[EI_MAG2], ELFMAG2);
     checkHeaderField(e_ident[EI_MAG3], ELFMAG3);
-    checkHeaderField(e_ident[EI_CLASS], ELFCLASS64);  // 64 bit only supported
+    // checkHeaderField(e_ident[EI_CLASS], ELFCLASS64);  // 64 bit only supported
     checkHeaderField(e_ident[EI_DATA], ELFDATA2LSB);  // little endian only supported
     checkHeaderField(e_machine, EM_RISCV);            // RISCV architecture only supported
 }
